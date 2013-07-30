@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "Github show references",
+  "description": "When you want to see only a list of the issues that reference the issue or pull request you are on, without any comments",
+  "version": "1.0",
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://github.com/*/issues/*", "*://github.com/*/pull/*"],
+      "js": [
+        "jquery.min.js",
+        "popup.js"
+      ]
+    }
+  ],
+
+  "permissions": [
+    "tabs", "*://*/*",
+    "webNavigation"
+  ],
+  "page_action": {
+    "default_icon": "icons/false.png",
+    "default_title": "Show only references"
+  }
+}

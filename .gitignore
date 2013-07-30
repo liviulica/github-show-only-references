@@ -1,0 +1,6 @@
+# Stevie fans go here
+.DS_Store
+
+# Project files
+*.sublime-workspace
+*.sublime-project
